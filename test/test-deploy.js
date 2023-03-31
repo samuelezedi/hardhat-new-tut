@@ -1,5 +1,5 @@
 const { ethers } = require("hardhat")
-const { expert, assert } = require("chai")
+const { expect, assert } = require("chai")
 
 describe("SimpleStorage", function () {
     let simpleStorageFactory
@@ -25,6 +25,6 @@ describe("SimpleStorage", function () {
 
         const currentValue = await simpleStorage.retrieve()
         assert.equal(currentValue.toString(), expectedValue)
-        expect(currentValue.toString(), expectValue)
+        expect(currentValue.toString(), expectedValue)
     })
 })
